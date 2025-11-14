@@ -1,18 +1,78 @@
+:root {
+  --border-bottom: #e7e6e4;
+  --bottom-tagline: #fbf8e9;
+}
+
+.bodr {
+  border: 1px solid red;
+}
+
+.routes-container {
+  overflow-y: auto;
+}
+
+/* Navbar */
+.logo {
+  width: 100px;
+  height: 100%;
+}
+
+.seperator {
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-bottom);
+}
+
+/* Footer */
+.footer-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1000;
+}
+
+.buttons-container {
+  box-shadow: rgba(54, 50, 48, 0.2) 0px 0.2rem 0.5rem 0.2rem;
+}
+
+.letstartbtn {
+  width: 150px;
+  font-size: large;
+  border-radius: 10px;
+  font-weight: 600;
+  background-color: #e66c55;
+  color: white;
+}
+
+#btnfont:hover {
+  background-color: #cc4b33;
+}
+
 /* Dog Namw Component */
-#shadowset {
+.dogname-box {
+  padding: 10px;
   border-radius: 15px;
   box-shadow: 0px 0px 3px 3px #fafafa;
 }
 
-#navheadind {
-  font-weight: bold;
-  font-size: 19px;
-  color: #a27767;
-  background-color: #ffe180;
-  border: 4px solid #a27767;
-  border-top: none;
-  line-height: 100%;
-  width: 100px;
+/* Ensure text-end works properly - align with input field */
+.col-10 .text-end {
+  width: 100%;
+  padding-right: 0;
+  margin-right: 0;
+  padding-left: 0;
+  margin-left: 0;
+  text-align: right;
+}
+
+/* Style for div containing labelclr - target by mt-5 class */
+.col-10 > .mt-5 {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 0 !important;
+  width: 100%;
 }
 
 #headingbg {
@@ -39,6 +99,11 @@
   color: #174f78;
   font-family: helvetica, arial, sans-serif;
   text-decoration: underline;
+  display: inline-block;
+  text-align: right;
+  margin-right: 0;
+  padding-right: 0;
+  margin-left: auto;
 }
 
 #labelclr1 {
@@ -51,17 +116,8 @@
   font-family: helvetica, arial, sans-serif;
 }
 
-#btnfont {
-  width: 150px;
-  font-size: large;
-  border-radius: 10px;
-  font-weight: 600;
-  background-color: #e66c55;
-  color: white;
-}
-
-#FreshFact {
-  background-color: #fbf8e9;
+.bottom-tagline {
+  background-color: var(--bottom-tagline);
   margin-top: 40px;
   font-family: "Poppins", sans-serif;
 }
@@ -74,27 +130,6 @@
 
 #atag {
   font-size: large;
-}
-
-#btnfont {
-  width: 150px;
-  font-size: large;
-  border-radius: 10px;
-  font-weight: 600;
-  background-color: #e66c55;
-  color: white;
-}
-
-#btnfont:hover {
-  background-color: #cc4b33;
-}
-
-#footer {
-  position: sticky;
-  background-color: white;
-  width: 100%;
-  height: 5rem;
-  bottom: 0px;
 }
 
 #inputheading1 {
@@ -322,8 +357,6 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
   color: #e2e2e2;
 }
 
-/* Footer */
-
 a {
   text-decoration: none;
   display: inline-block;
@@ -456,7 +489,6 @@ label h4 {
   font-size: 18px;
 }
 
-
 #flexCheckDefault {
   height: 25px;
   width: 25px;
@@ -507,9 +539,8 @@ label h4 {
   color: #174f78;
 }
 
-#badgetext {
+.badgetext {
   color: #174f78;
-  float: right;
   font-weight: 500;
   font-size: 14px;
 }
