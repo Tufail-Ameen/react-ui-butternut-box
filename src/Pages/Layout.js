@@ -144,7 +144,7 @@ export default function Layout(props) {
           </div>
         </div>
 
-        <div className="routes-container">
+        <div className="routes-container bodr">
           <Routes>
             <Route path="/" element={<DogName />} />
             <Route path="/Gender" element={<Gender />} />

@@ -132,13 +132,13 @@
   font-size: large;
 }
 
-#inputheading1 {
+.mainheading {
   font-weight: 700;
   font-size: 20px;
   color: #174f78;
 }
 
-#inputheading2 {
+.subheading {
   color: #174f78;
 }
 
@@ -543,4 +543,14 @@ label h4 {
   color: #174f78;
   font-weight: 500;
   font-size: 14px;
+}
+
+/* Button Component */
+.button-design {
+  background-color: #11486e;
+  color: white;
+  border-radius: 40px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
 }
