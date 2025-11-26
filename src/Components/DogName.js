@@ -3,20 +3,25 @@ import { useNavigate } from "react-router-dom";
 import "font-awesome/css/font-awesome.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { useDispatch } from "react-redux";
+import { dogNameAction } from "../Redux/Slice/NameSlice";
 
 export default function DogName(props) {
-  const [name, setName] = useState("");
+  // const [name, setName] = useState("");
   const [dogNames, setDogNames] = useState([]);
   const [showFocus, setShowFocus] = useState("");
-  const handelchangeevent = (e) => {
-    setName(e.target.value);
-  };
 
-  const handleChangeEvent = (e, index) => {
-    const updatedNames = [...dogNames];
-    updatedNames[index] = e.target.value;
-    setDogNames(updatedNames);
-  };
+  const dispatch = useDispatch();
+
+  // const handelchangeevent = (e) => {
+  //   setName(e.target.value);
+  // };
+
+  // const handleChangeEvent = (e, index) => {
+  //   const updatedNames = [...dogNames];
+  //   updatedNames[index] = e.target.value;
+  //   setDogNames(updatedNames);
+  // };
 
   const handleAnotherDogClick = (e) => {
     e.preventDefault();
@@ -49,8 +54,8 @@ export default function DogName(props) {
                   My dog is called...
                 </label>
                 <input
-                  onChange={handelchangeevent}
-                  value={name}
+                  onChange={(e) => dispatch(dogNameAction(e.target.value))}
+                  // value={name}
                   className="form-control form-control-lg border"
                   type="text"
                   placeholder="Your dog's name"
@@ -101,8 +106,8 @@ export default function DogName(props) {
                     My dog is called...
                   </label>
                   <input
-                    onChange={(e) => handleChangeEvent(e, index)}
-                    value={dogName}
+                    onChange={(e) => dispatch(dogNameAction(e.target.value))}
+                    // value={dogName}
                     id={`boxshadowhandel${index}`}
                     className="form-control form-control-lg border"
                     type="text"

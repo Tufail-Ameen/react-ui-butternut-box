@@ -106,10 +106,10 @@ export default function Layout(props) {
               <div className="col-8 col-sm-8 col-md-4">
                 <div className="text-end p-2 ">
                   <div className="">
-                    <span id="badgeset1" class="badge badge-danger border mx-1">
+                    <span id="badgeset1" className="badge badge-danger border mx-1">
                       25% OFF
                     </span>
-                    <span id="badgeset2" class="badge badge-danger border">
+                    <span id="badgeset2" className="badge badge-danger border">
                       25% OFF
                     </span>
                   </div>
@@ -198,10 +198,10 @@ export default function Layout(props) {
           <div className="row m-0 p-0 buttons-container">
             <div className="col-md-4"></div>
             <div className="col-md-4">
-              <a href="#" onClick={handelbackbtn} class="previous mt-3 mb-3">
+              <a href="#" onClick={handelbackbtn} className="previous mt-3 mb-3">
                 &laquo; Back
               </a>
-              <a href="#" onClick={handleletstartbtn} class="next mt-3 mb2">
+              <a href="#" onClick={handleletstartbtn} className="next mt-3 mb2">
                 Continue &raquo;
               </a>
             </div>

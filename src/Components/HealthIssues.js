@@ -41,7 +41,7 @@ export default function HealthIssues(props) {
               type="button"
               onClick={() => handlbtn(1)}
               style={clr == 1 ? styles : {}}
-              class="btn mx-2 py-3 btnclr"
+              className="btn mx-2 py-3 btnclr"
             >
               No health issues
             </button>
@@ -49,7 +49,7 @@ export default function HealthIssues(props) {
               type="button"
               onClick={() => handlbtn(2)}
               style={clr == 2 ? styles : {}}
-              class="btn py-3 btnclr"
+              className="btn py-3 btnclr"
             >
               Some health issues
             </button>

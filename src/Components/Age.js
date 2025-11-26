@@ -1,9 +1,12 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "./Button";
+import { useSelector } from "react-redux";
 
 export default function Age(props) {
   let navigate = useNavigate();
+  const dogName = useSelector((state) => state.dogNameSlice.value);
+
 
   const handleclickbtn = () => {
     navigate("/Breed");
@@ -17,7 +20,7 @@ export default function Age(props) {
       <div className="row m-0 p-0">
         <div className="col-12 bodr">
           <div className="text-center d-flex flex-column align-items-center gap-4 py-3">
-            <div className="mt-2 mainheading">is</div>
+            <div className="mt-2 mainheading">{dogName} is</div>
             <div className=" d-flex flex-row gap-3">
               <Button />
               <Button />
